@@ -22,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               Container(
                 height: 130,
-                width: 360,
+                width: 400,
                 color: secondaryColor,
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
@@ -49,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Padding(
                 padding: const EdgeInsets.only(
                   left: 30,
-                  right: 22,
+                  right: 30,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -99,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     GestureDetector(
                       onTap: () {},
                       child: Container(
-                        width: 320,
+                        width: MediaQuery.of(context).size.width * 1,
                         height: 48,
                         decoration: BoxDecoration(
                           color: secondaryColor,
