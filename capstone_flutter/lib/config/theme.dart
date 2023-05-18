@@ -7,4 +7,6 @@ Color thirdColor = const Color(0xffC2813E);
 Color whiteColor = Colors.white;
 Color blackColor = Colors.black;
 
-TextStyle poppinsKecil = GoogleFonts.poppins(fontSize: 14, color: whiteColor);
+TextStyle poppinsKecil = GoogleFonts.poppins(fontSize: 12, color: whiteColor);
+TextStyle poppinsJudul = GoogleFonts.poppins(
+    fontSize: 20, color: blackColor, fontWeight: FontWeight.bold);

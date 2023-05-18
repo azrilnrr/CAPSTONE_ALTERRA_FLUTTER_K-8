@@ -45,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Padding(
                 padding: const EdgeInsets.only(
                   left: 30,
@@ -60,34 +60,35 @@ class _LoginScreenState extends State<LoginScreen> {
                           fontSize: 12, color: blackColor),
                     ),
                     TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: 'Username@gmail.com',
                         prefixIcon: Icon(Icons.person),
                         border: OutlineInputBorder(),
                       ),
                       style: poppinsKecil,
                     ),
-                    SizedBox(height: 12),
+                    const SizedBox(height: 12),
                     Text(
                       'Password',
                       style: poppinsKecil.copyWith(
                           fontSize: 12, color: blackColor),
                     ),
                     TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: 'Username@gmail.com',
                         prefixIcon: Icon(Icons.lock),
                         border: OutlineInputBorder(),
                       ),
                       style: poppinsKecil,
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     InkWell(
                       onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => LupaPasswordScreen()));
+                                builder: (context) =>
+                                    const LupaPasswordScreen()));
                       },
                       child: Text(
                         'Lupa Password ?',
@@ -95,7 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             fontSize: 12, color: secondaryColor),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     GestureDetector(
                       onTap: () {},
                       child: Container(
@@ -113,7 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 40),
+                    const SizedBox(height: 40),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -127,7 +128,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => RegisterScreen()));
+                                    builder: (context) =>
+                                        const RegisterScreen()));
                           },
                           child: Text(
                             'Sign Up',

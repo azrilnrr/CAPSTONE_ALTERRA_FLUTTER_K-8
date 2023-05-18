@@ -1,5 +1,4 @@
-import 'package:capstone_flutter/view/home.dart';
-import 'package:capstone_flutter/view/login_screen.dart';
+import 'package:capstone_flutter/view/shop/shop_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,10 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: LoginScreen(),
-      home: HomePageScreen(),
+      home: ShopScreen(),
     );
   }
 }
