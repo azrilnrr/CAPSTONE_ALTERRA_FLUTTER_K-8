@@ -1,4 +1,5 @@
 import 'package:capstone_flutter/config/theme.dart';
+import 'package:capstone_flutter/view/account/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -17,24 +18,36 @@ class AccountScreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Center(
-            child: Column(
-              children: [
-                const CircleAvatar(
-                  backgroundImage: AssetImage('assets/profil.png'),
-                  radius: 65,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const ProfileScreen();
+                  },
                 ),
-                SizedBox(
-                  height: size.height * .02,
-                ),
-                Text(
-                  'User',
-                  style: GoogleFonts.poppins(
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
+              );
+            },
+            child: Center(
+              child: Column(
+                children: [
+                  const CircleAvatar(
+                    backgroundImage: AssetImage('assets/profil.png'),
+                    radius: 65,
                   ),
-                ),
-              ],
+                  SizedBox(
+                    height: size.height * .02,
+                  ),
+                  Text(
+                    'User',
+                    style: GoogleFonts.poppins(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           SizedBox(height: size.height * .05),
