@@ -1,6 +1,10 @@
 import 'package:capstone_flutter/config/theme.dart';
+import 'package:capstone_flutter/view/account/change_numphone_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'change_address_screen.dart';
+import 'change_email_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -154,21 +158,33 @@ class ProfileScreen extends StatelessWidget {
                           color: const Color(0xff5E5E5E),
                         ),
                       ),
-                      Row(
-                        children: [
-                          Text(
-                            'userexample@gmail.com',
-                            style: poppinsKecil.copyWith(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: blackColor,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const ChangeEmailScreen();
+                              },
                             ),
-                          ),
-                          Icon(
-                            Icons.arrow_forward_ios,
-                            size: size.width * .05,
-                          ),
-                        ],
+                          );
+                        },
+                        child: Row(
+                          children: [
+                            Text(
+                              'userexample@gmail.com',
+                              style: poppinsKecil.copyWith(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: blackColor,
+                              ),
+                            ),
+                            Icon(
+                              Icons.arrow_forward_ios,
+                              size: size.width * .05,
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -183,21 +199,33 @@ class ProfileScreen extends StatelessWidget {
                           color: const Color(0xff5E5E5E),
                         ),
                       ),
-                      Row(
-                        children: [
-                          Text(
-                            '0823 1234 5678',
-                            style: poppinsKecil.copyWith(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: blackColor,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const ChangeNumberScreen();
+                              },
                             ),
-                          ),
-                          Icon(
-                            Icons.arrow_forward_ios,
-                            size: size.width * .05,
-                          ),
-                        ],
+                          );
+                        },
+                        child: Row(
+                          children: [
+                            Text(
+                              '0823 1234 5678',
+                              style: poppinsKecil.copyWith(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: blackColor,
+                              ),
+                            ),
+                            Icon(
+                              Icons.arrow_forward_ios,
+                              size: size.width * .05,
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -212,21 +240,33 @@ class ProfileScreen extends StatelessWidget {
                           color: const Color(0xff5E5E5E),
                         ),
                       ),
-                      Row(
-                        children: [
-                          Text(
-                            'Maluku',
-                            style: poppinsKecil.copyWith(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: blackColor,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const ChangeAddressScreen();
+                              },
                             ),
-                          ),
-                          Icon(
-                            Icons.arrow_forward_ios,
-                            size: size.width * .05,
-                          ),
-                        ],
+                          );
+                        },
+                        child: Row(
+                          children: [
+                            Text(
+                              'Maluku',
+                              style: poppinsKecil.copyWith(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: blackColor,
+                              ),
+                            ),
+                            Icon(
+                              Icons.arrow_forward_ios,
+                              size: size.width * .05,
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
