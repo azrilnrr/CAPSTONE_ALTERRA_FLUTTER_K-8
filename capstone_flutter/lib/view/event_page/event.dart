@@ -1,4 +1,5 @@
 import 'package:capstone_flutter/config/theme.dart';
+import 'package:capstone_flutter/view/event_page/eventdetail.dart';
 import 'package:flutter/material.dart';
 
 class EventPage extends StatefulWidget {
@@ -15,7 +16,7 @@ class _EventPageState extends State<EventPage> {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(
-          padding: const EdgeInsets.all(15.0),
+          padding: const EdgeInsets.only(top: 50.0, left: 20.0, right: 20.0),
           child: Column(
             children: [
               Container(
@@ -63,62 +64,84 @@ class CardEvent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      shape: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-      color: fifthColor,
-      shadowColor: secondaryColor,
-      child: Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10.0),
-              child: Image.asset(
-                'assets/logo.png',
-                width: 94,
-                height: 87,
-              ),
-            ),
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const EventDetailScreen(),
           ),
-          const SizedBox(
-            width: 24,
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Card(
-                color: thirdColor,
-                child: Text(
-                  '12 Jan 2023',
-                  style: poppinsKecil.copyWith(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w400,
-                      color: whiteColor),
+        );
+      },
+      child: Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        color: fifthColor,
+        shadowColor: secondaryColor,
+        child: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10.0),
+                child: Image.asset(
+                  'assets/logo.png',
+                  width: 94,
+                  height: 87,
                 ),
               ),
-              const SizedBox(
-                height: 12,
-              ),
-              Text(
-                'Title Event',
-                style: poppinsKecil.copyWith(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                    color: blackColor),
-              ),
-              const SizedBox(
-                height: 12,
-              ),
-              Text(
-                'Lokasi Event',
-                style: poppinsKecil.copyWith(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                    color: blackColor),
-              )
-            ],
-          )
-        ],
+            ),
+            const SizedBox(
+              width: 24,
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Card(
+                  color: thirdColor,
+                  child: Text(
+                    '12 Jan 2023',
+                    style: poppinsKecil.copyWith(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                        color: whiteColor),
+                  ),
+                ),
+                const SizedBox(
+                  height: 12,
+                ),
+                Text(
+                  'Title Event',
+                  style: poppinsKecil.copyWith(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: blackColor),
+                ),
+                const SizedBox(
+                  height: 12,
+                ),
+                Row(
+                  children: [
+                    Image.asset(
+                      'assets/icon/event_icon/location_on.png',
+                      width: 10,
+                      height: 13,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'Lokasi Event',
+                      style: poppinsKecil.copyWith(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                          color: blackColor),
+                    ),
+                  ],
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

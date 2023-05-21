@@ -45,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Padding(
                 padding: const EdgeInsets.only(
                   left: 30,
@@ -60,21 +60,21 @@ class _LoginScreenState extends State<LoginScreen> {
                           fontSize: 12, color: blackColor),
                     ),
                     TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: 'Username@gmail.com',
                         prefixIcon: Icon(Icons.person),
                         border: OutlineInputBorder(),
                       ),
                       style: poppinsKecil,
                     ),
-                    SizedBox(height: 12),
+                    const SizedBox(height: 12),
                     Text(
                       'Password',
                       style: poppinsKecil.copyWith(
                           fontSize: 12, color: blackColor),
                     ),
                     TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: 'Username@gmail.com',
                         prefixIcon: Icon(Icons.lock),
                         border: OutlineInputBorder(),
