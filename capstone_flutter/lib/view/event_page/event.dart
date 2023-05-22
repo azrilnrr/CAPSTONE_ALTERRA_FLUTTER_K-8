@@ -1,6 +1,7 @@
 import 'package:capstone_flutter/config/theme.dart';
 import 'package:capstone_flutter/view/event_page/eventdetail.dart';
 import 'package:flutter/material.dart';
+import 'package:weekly_date_picker/weekly_date_picker.dart';
 
 class EventPage extends StatefulWidget {
   const EventPage({super.key});
@@ -10,6 +11,13 @@ class EventPage extends StatefulWidget {
 }
 
 class _EventPageState extends State<EventPage> {
+  DateTime _selectedDay = DateTime.now();
+  @override
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,19 +27,28 @@ class _EventPageState extends State<EventPage> {
           padding: const EdgeInsets.only(top: 50.0, left: 20.0, right: 20.0),
           child: Column(
             children: [
-              Container(
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.circular(20.0),
-                    color: forthColor),
-                width: 600,
-                height: 200,
-                child: Text('Tanggal Hari Ini',
-                    style: poppinsKecil.copyWith(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400,
-                        color: blackColor)),
+              WeeklyDatePicker(
+                backgroundColor: thirdColor,
+                weekdays: const [
+                  'Mon',
+                  'Tue',
+                  'Wed',
+                  'Thu',
+                  'Fri',
+                  'Sat',
+                  'Sun'
+                ],
+                selectedBackgroundColor: fifthColor,
+                enableWeeknumberText: false,
+                selectedDigitColor: thirdColor,
+                digitsColor: secondaryColor,
+                weekdayTextColor: blackColor,
+                selectedDay: _selectedDay,
+                changeDay: (value) => setState(
+                  () {
+                    _selectedDay = value;
+                  },
+                ),
               ),
               const SizedBox(
                 height: 40,
@@ -96,14 +113,22 @@ class CardEvent extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                const SizedBox(
+                  height: 10,
+                ),
                 Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
                   color: thirdColor,
-                  child: Text(
-                    '12 Jan 2023',
-                    style: poppinsKecil.copyWith(
-                        fontSize: 10,
-                        fontWeight: FontWeight.w400,
-                        color: whiteColor),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      '12 Jan 2023',
+                      style: poppinsKecil.copyWith(
+                          fontSize: 10,
+                          fontWeight: FontWeight.w400,
+                          color: whiteColor),
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -137,6 +162,9 @@ class CardEvent extends StatelessWidget {
                           color: blackColor),
                     ),
                   ],
+                ),
+                const SizedBox(
+                  height: 10,
                 )
               ],
             )
