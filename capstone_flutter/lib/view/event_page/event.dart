@@ -21,52 +21,54 @@ class _EventPageState extends State<EventPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Padding(
-          padding: const EdgeInsets.only(top: 50.0, left: 20.0, right: 20.0),
-          child: Column(
-            children: [
-              WeeklyDatePicker(
-                backgroundColor: thirdColor,
-                weekdays: const [
-                  'Mon',
-                  'Tue',
-                  'Wed',
-                  'Thu',
-                  'Fri',
-                  'Sat',
-                  'Sun'
-                ],
-                selectedBackgroundColor: fifthColor,
-                enableWeeknumberText: false,
-                selectedDigitColor: thirdColor,
-                digitsColor: secondaryColor,
-                weekdayTextColor: blackColor,
-                selectedDay: _selectedDay,
-                changeDay: (value) => setState(
-                  () {
-                    _selectedDay = value;
-                  },
+      body: SafeArea(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Padding(
+            padding: const EdgeInsets.only(top: 50.0, left: 20.0, right: 20.0),
+            child: Column(
+              children: [
+                WeeklyDatePicker(
+                  backgroundColor: thirdColor,
+                  weekdays: const [
+                    'Mon',
+                    'Tue',
+                    'Wed',
+                    'Thu',
+                    'Fri',
+                    'Sat',
+                    'Sun'
+                  ],
+                  selectedBackgroundColor: fifthColor,
+                  enableWeeknumberText: false,
+                  selectedDigitColor: thirdColor,
+                  digitsColor: secondaryColor,
+                  weekdayTextColor: blackColor,
+                  selectedDay: _selectedDay,
+                  changeDay: (value) => setState(
+                    () {
+                      _selectedDay = value;
+                    },
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: 40,
-              ),
-              const CardEvent(),
-              const SizedBox(
-                height: 10,
-              ),
-              const CardEvent(),
-              const SizedBox(
-                height: 10,
-              ),
-              const CardEvent(),
-              const SizedBox(
-                height: 10,
-              ),
-              const CardEvent()
-            ],
+                const SizedBox(
+                  height: 40,
+                ),
+                const CardEvent(),
+                const SizedBox(
+                  height: 10,
+                ),
+                const CardEvent(),
+                const SizedBox(
+                  height: 10,
+                ),
+                const CardEvent(),
+                const SizedBox(
+                  height: 10,
+                ),
+                const CardEvent()
+              ],
+            ),
           ),
         ),
       ),
