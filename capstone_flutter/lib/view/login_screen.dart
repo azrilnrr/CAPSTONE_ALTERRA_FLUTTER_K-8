@@ -1,7 +1,10 @@
 import 'package:capstone_flutter/config/theme.dart';
 import 'package:capstone_flutter/view/lupa_password_screen.dart';
+import 'package:capstone_flutter/view/menu_utama/home.dart';
+import 'package:capstone_flutter/view/navbar_bawah.dart';
 import 'package:capstone_flutter/view/register_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -20,8 +23,8 @@ class _LoginScreenState extends State<LoginScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                height: 130,
-                width: 400,
+                height: 130.h,
+                width: 400.w,
                 color: secondaryColor,
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
@@ -32,15 +35,15 @@ class _LoginScreenState extends State<LoginScreen> {
                           'Login dan nikmati fitur yang kami sediakan!',
                           maxLines: 2,
                           style: poppinsKecil.copyWith(
-                              fontSize: 16, fontWeight: FontWeight.bold),
+                              fontSize: 16.sp, fontWeight: FontWeight.bold),
                         ),
                       ),
                       CircleAvatar(
                         backgroundColor: primaryColor,
-                        radius: 40,
+                        radius: 40.r,
                         child: CircleAvatar(
                           backgroundColor: primaryColor,
-                          radius: 30,
+                          radius: 30.r,
                           child: Image.asset('assets/logo.png'),
                         ),
                       ),
@@ -48,7 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 40.h),
               Padding(
                 padding: const EdgeInsets.only(
                   left: 30,
@@ -60,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Text(
                       'Email atau Username',
                       style: poppinsKecil.copyWith(
-                          fontSize: 12, color: blackColor),
+                          fontSize: 12.sp, color: blackColor),
                     ),
                     TextFormField(
                       decoration: InputDecoration(
@@ -70,11 +73,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       style: poppinsKecil,
                     ),
-                    SizedBox(height: 12),
+                    SizedBox(height: 12.h),
                     Text(
                       'Password',
                       style: poppinsKecil.copyWith(
-                          fontSize: 12, color: blackColor),
+                          fontSize: 12.sp, color: blackColor),
                     ),
                     TextFormField(
                       decoration: InputDecoration(
@@ -84,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       style: poppinsKecil,
                     ),
-                    SizedBox(height: 30),
+                    SizedBox(height: 30.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
@@ -99,17 +102,22 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Text(
                             'Lupa Password ?',
                             style: poppinsKecil.copyWith(
-                                fontSize: 12, color: secondaryColor),
+                                fontSize: 12.sp, color: secondaryColor),
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 20.h),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => NavbarBawah()));
+                      },
                       child: Container(
-                        width: MediaQuery.of(context).size.width * 1,
-                        height: 48,
+                        width: 360.w,
+                        height: 48.h,
                         decoration: BoxDecoration(
                           color: secondaryColor,
                           borderRadius: BorderRadius.circular(8),
@@ -122,14 +130,14 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 40),
+                    SizedBox(height: 40.h),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
                           'Belum punya akun? ',
                           style: poppinsKecil.copyWith(
-                              fontSize: 12, color: secondaryColor),
+                              fontSize: 12.sp, color: secondaryColor),
                         ),
                         InkWell(
                           onTap: () {

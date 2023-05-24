@@ -1,6 +1,7 @@
 import 'package:capstone_flutter/config/theme.dart';
 import 'package:capstone_flutter/view/register_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LupaPasswordScreen extends StatefulWidget {
   const LupaPasswordScreen({super.key});
@@ -17,8 +18,8 @@ class _LupaPasswordScreenState extends State<LupaPasswordScreen> {
         child: Column(
           children: [
             Container(
-              height: 130,
-              width: 400,
+              height: 130.h,
+              width: 400.w,
               color: secondaryColor,
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
@@ -29,15 +30,15 @@ class _LupaPasswordScreenState extends State<LupaPasswordScreen> {
                         'Login dan nikmati fitur yang kami sediakan!',
                         maxLines: 2,
                         style: poppinsKecil.copyWith(
-                            fontSize: 16, fontWeight: FontWeight.bold),
+                            fontSize: 16.sp, fontWeight: FontWeight.bold),
                       ),
                     ),
                     CircleAvatar(
                       backgroundColor: primaryColor,
-                      radius: 40,
+                      radius: 40.r,
                       child: CircleAvatar(
                         backgroundColor: primaryColor,
-                        radius: 30,
+                        radius: 30.r,
                         child: Image.asset('assets/logo.png'),
                       ),
                     ),
@@ -45,13 +46,15 @@ class _LupaPasswordScreenState extends State<LupaPasswordScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 30.sp),
             Text(
               'Lupa Password?',
               style: poppinsKecil.copyWith(
-                  fontSize: 16, fontWeight: FontWeight.w700, color: blackColor),
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.w700,
+                  color: blackColor),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 10.h),
             Text(
               'Jangan khawatir, kami akan mengirimkan pesan reset',
               style: poppinsKecil.copyWith(

@@ -1,6 +1,7 @@
 import 'package:capstone_flutter/config/theme.dart';
 import 'package:capstone_flutter/view/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -18,8 +19,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
           child: Column(
             children: [
               Container(
-                height: 130,
-                width: 400,
+                height: 180.h,
+                width: 400.w,
                 color: secondaryColor,
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
@@ -30,14 +31,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         'REGISTER',
                         maxLines: 2,
                         style: poppinsKecil.copyWith(
-                            fontSize: 16, fontWeight: FontWeight.bold),
+                            fontSize: 16.sp, fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(height: 10),
+                      SizedBox(height: 10.h),
                       Text(
                         'Lakukan Pendaftaran akun agar kamu dapat mengikuti perkembangan kami!',
                         maxLines: 2,
                         style: poppinsKecil.copyWith(
-                          fontSize: 14,
+                          fontSize: 14.sp,
                         ),
                       ),
                     ],
@@ -48,7 +49,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               Center(
                 child: Image.asset(
                   'assets/logo-2.png',
-                  width: 200,
+                  width: 200.w,
                 ),
               ),
               SizedBox(height: 30),

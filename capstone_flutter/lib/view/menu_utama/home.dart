@@ -1,6 +1,6 @@
 import 'package:capstone_flutter/view/widget/carousel_welcome.dart';
 import 'package:flutter/material.dart';
-import '../config/theme.dart';
+import '../../config/theme.dart';
 
 class HomePageScreen extends StatelessWidget {
   const HomePageScreen({super.key});
