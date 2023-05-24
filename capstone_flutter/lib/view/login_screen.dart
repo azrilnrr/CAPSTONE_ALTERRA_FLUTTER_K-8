@@ -14,7 +14,6 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: primaryColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -39,7 +38,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       CircleAvatar(
                         backgroundColor: primaryColor,
                         radius: 40,
-                        // child: Image.asset('assets/logo.png'),
+                        child: CircleAvatar(
+                          backgroundColor: primaryColor,
+                          radius: 30,
+                          child: Image.asset('assets/logo.png'),
+                        ),
                       ),
                     ],
                   ),
@@ -82,18 +85,24 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: poppinsKecil,
                     ),
                     SizedBox(height: 30),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => LupaPasswordScreen()));
-                      },
-                      child: Text(
-                        'Lupa Password ?',
-                        style: poppinsKecil.copyWith(
-                            fontSize: 12, color: secondaryColor),
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        LupaPasswordScreen()));
+                          },
+                          child: Text(
+                            'Lupa Password ?',
+                            style: poppinsKecil.copyWith(
+                                fontSize: 12, color: secondaryColor),
+                          ),
+                        ),
+                      ],
                     ),
                     SizedBox(height: 20),
                     GestureDetector(
