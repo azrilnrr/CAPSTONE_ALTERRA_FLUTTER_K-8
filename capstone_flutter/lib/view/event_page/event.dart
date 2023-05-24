@@ -12,11 +12,6 @@ class EventPage extends StatefulWidget {
 
 class _EventPageState extends State<EventPage> {
   DateTime _selectedDay = DateTime.now();
-  @override
-  @override
-  void initState() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
